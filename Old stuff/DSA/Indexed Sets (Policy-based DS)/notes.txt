@@ -1,0 +1,20 @@
+Basically, indexed set is a set that supports access and search by index (both in O(log n))
+
+indexed_set data structure in C++:
+This is a policy based data structure (i.e. data structure not in STL) supported by the g++ compiler
+
+Supports all the operations of a normal C++ set (insert, erase, find, upper/lower_bound) in O(n log n)
+
+In addition:
+    s.find_by_order(i) returns value of element at order i, in O(log n)
+    s.order_by_key(x) returns index of element x, in O(log n)
+                        If x isn't in s: returns what index element x would have if inserted
+
+    Note: indexed_set is 0-indexed
+
+
+In addition to indexed sets, we can also use indexed multisets.
+
+To do indexed multisets: have an indexed set of pairs {value, insertion order}
+    And to find how many elements are before or after a value: just use upper/lower_bound
+    (similarly, we can do this to check if a value is in the multiset)

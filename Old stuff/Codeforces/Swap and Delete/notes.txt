@@ -1,0 +1,9 @@
+Basically: goal is find min deletions that makes s have same chars as inverse of a prefix of s
+I don't think there's a clean-cut mathematical solution...
+Just go through each prefix and calculate:
+
+say prefix has a 0s and b 1s, then find min deletions such that s has b 0s and a 1s.
+say s has x 0s and y 1s: need x>=b and y>=a, otherwise impossible.
+                        then, deletions needed = (x-b)+(y-a)
+So, a and b keep increasing:
+    thus, min deletions is at last point where x<=b and y<=a.

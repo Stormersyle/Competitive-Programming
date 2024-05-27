@@ -1,0 +1,22 @@
+Cycle finding in directed graph:
+
+Key idea:
+-We can find cycles by doing DFS and seeing if we visit a node on current path
+-Do 3-state DFS: track whether each node is on current path by adding a "processing" state
+
+Algorithm, 3-state DFS:
+DFS but keep three states: processed, processing, and unprocessed
+If we ever visit a node that's processing (i.e. on current path), we've found a cycle!
+And to retrieve cycle: simply track the current path of our DFS using a stack.
+
+
+Cycle finding in (simple) undirected graphs: same idea as for directed graphs,
+just also keep track of each node's parent (in the DFS) so we don't count edges as a cycle.
+
+If we allow double-edges: easy fix is just go through and look for double-edges first, since those are
+automatically cycles.
+
+
+Finally, note on functional graphs:
+functional graph consists of branched rings, so we can do 3-state DFS to find ALL cycles!
+(since: no two cycles overlap)

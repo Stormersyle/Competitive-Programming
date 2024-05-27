@@ -1,0 +1,14 @@
+Key idea:
+    If we sort intervals by start point and go reverse (down to up):
+        Number of intervals each interval contains = number of smaller endpoints after!
+
+        We can track this with an indexed set/multiset (a policy-based data structure).
+
+General ideas:
+    To solve interval/range problems, common idea:
+    Sort the intervals in order of start/end points, and go through it either forward or reverse!
+
+    This idea is powerful because this lets us guarantee certain things about the previous intervals
+    we've traversed. In this case, we can guarantee that the previous intervals are precisely all the intervals
+    with a greater starting point than our interval, so we only need to look for smaller endpoints
+    among them.

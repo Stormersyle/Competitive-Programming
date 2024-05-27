@@ -1,0 +1,4 @@
+Key idea:
+    -We get -1 for each odd+even combination, -0 for others.
+    -P1 tries to get rid of odds, P2 tries to combine odd+even
+        Since: each new # (from combine) is always even

@@ -1,0 +1,27 @@
+Solution:
+First, split into "same row" and "diff row" case.
+    Same row: just n*(inversions in q)
+    To count inversions in permutation q: just go through q, and keep indexed set of previous elements
+
+Different rows:
+    Essentially, count # of (i<j, x, y) such that p_i*2^{q_x}>p_j*2^{q_y}, or:
+    p_i/p_j > 2^{q_x-q_y}
+    So basically: just want to count # of (i<j, diff) st p_i/p_j>2^diff, where we weigh by diff count.
+    Now: count by diff!
+        For diffs outside of [-log(2n-1), log(2n-1)]: automatically all/none work
+                                                    (since ratio bounded by [1/(2n-1), 2n-1])
+        Thus: only need to check O(log n) diffs.
+        And to check each diff: just go through p and keep indexed set of prev elements.
+    Total: O(n (log n)^2)
+
+
+Key idea:
+-Count inversions by diff! (difference q_y-q_x)
+    Only need to check O(log n) inversions, because for rest, automatically all/none of pairs work!
+
+
+General ideas:
+-Double-counting / counting by a certain thing.
+    Basically, when counting something: we want to "count by"/iterate through the correct thing(s).
+
+-Pruning the search space (one form of brute force + optimization)

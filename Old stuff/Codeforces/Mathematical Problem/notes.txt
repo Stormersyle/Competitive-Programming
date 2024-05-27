@@ -1,0 +1,11 @@
+Key idea:
+    -By adding 00 to everything, we can make length n squares from all length n-2 squares
+        And for other two numbers: turns out 1...6...9, 9...6...1 both work!
+        Thus: 1, 6, 9 + rest 0s works.
+
+    -To figure this out: brute force on small cases!
+        Particularly, using Python: use a dict, assign each square to its digit set
+
+General ideas:
+    -For mathy/small/constructive problems, BRUTE FORCE ON SMALL CASES TO FIND A PATTERN!
+    -And: don't be afraid of simple/stupid/troll approaches, often they're correct.

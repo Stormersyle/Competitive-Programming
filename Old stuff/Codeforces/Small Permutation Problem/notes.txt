@@ -1,0 +1,36 @@
+Basically, we preset the size of each SIP(i) ("smaller in prefix" at i: set of values in prefix i that are <=i),
+and count how many valid permutations we can make.
+
+Solution:
+First, note: need SIP(i)<=i; SIP must start at 0/end at n, change by 0, 1, 2 each step.
+Go through sequence of SIP sizes:
+    at each step, fill in all the SIP values.
+    Turns out: # of ways we can fill out new SIP values is determined only by {a_i} (the preset SIP sizes),
+    and NOT what we've filled in before.
+
+    Thus: we can just multiply (# of ways to fill new SIP values) overcall steps!
+        Corollary: as long as the SIP size sequence satisfies size/change/start+end conditions, it's valid!
+
+For hard version: slight twist is that only some SIP sizes are set, not all of them.
+But this is pretty much the same! Again, go through sequence of set SIP sizes, and at each step,
+fill out all the SIP values. Again, # of ways we can fill out new SIP values determined only by {a_i},
+so again we can multiply (# of ways) over all steps (just with more complicated combinatorics).
+
+
+Key idea:
+-SIP size can change by 0, 1, or 2 each step (starts at 0, ends at n)
+
+-Go through sequence of SIP sizes and fill in corresponding SIP values at each step!
+    Each step, # of ways to fill in new SIP values depends ONLY ON PRESET SIP SIZES (i.e. {a_i}),
+    AND NOT ON THE PREVIOUSLY FILLED VALUES!
+
+
+General ideas:
+-Count in correct order!
+    In this case, very straightforward: just make the permutation by filling in the SIP values at each step!
+        When we count this way: we have a "memoryless property" or sorts:
+        # of ways to fill in each value depends only on {a_i} and not on past values we've filled in.
+
+    Generally, for "counting in the correct order" problems:
+    We want to count in an order such that a "MEMORYLESS PROPERTY" holds:
+        Number of choices at each step is independent of what was chosen at previous steps!

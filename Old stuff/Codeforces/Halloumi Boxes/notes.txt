@@ -1,0 +1,7 @@
+Key idea:
+If k>=2 then we can always sort, because we can make adj swaps!
+
+(Remember: we can always sort an array via adj swaps!
+since if no adj inversions: we're done; if there are: we can make an adj swap and decrease inversions by 1)
+
+Also: bubble sort algorithm only uses adj swaps!

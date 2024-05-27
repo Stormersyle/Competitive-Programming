@@ -1,0 +1,12 @@
+Key idea:
+-Need enough steps and parity match
+-If this is the case: always possible!
+    If 4k extra steps: loop
+    If 4k+2 extra steps: snake + loop
+
+Implementation: keep the right and down segments from each point.
+Note: extra segments are fine!
+
+In general: for problems involving moving on a grid,
+Important idea: Parity of coordinate sum changes every move!
+                (Can also think of it as a checkerboard coloring)

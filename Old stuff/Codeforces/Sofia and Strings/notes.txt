@@ -1,0 +1,33 @@
+Key ideas:
+
+-Reduce to making s a supersequence of t
+    This is since we can put all the deletions last (app. of simplify move sequences!)
+    I originally tried having deletions first; but that's wrong approach, harder to work with
+
+-Can sort substrings equiv to can swap adj. inversions; suffices to just swap
+
+-Greedy approach: for each char in t, match with next instance in s, then move over everything we can
+                                                                    (from left to right of the instance)!
+                    In other words: move over everything that's >char
+
+
+Implementation: Keep lists of positions of each char; can use deletions to simulate shifts
+
+General ideas:
+
+-For stuff dealing with supersequence/subsequences: greedily match one by one!
+    In general, common idea is "matching one by one"
+    Check subsequence problem: greedily match each char (standard ex. of greedy!)
+
+-Being able to sort arbitrary length intervals is equivalent to being able to swap adj inversion!
+    (And vice versa!)           This is because we can decompose a sort into swaps of adj inversions
+
+-See things from a different perspective; try greedy
+
+-Remember: simplify move sequences! (in this case, initially: we can move all deletions to the end)
+
+-Approaches to proving greedy:
+    -Simplify move sequences
+    -Local improvement
+        Basically, idea is: if we don't do greedy, we can make an improvement by instead doing greedy
+        Common idea: if we don't do greedy, we can get the same thing or something at least as good by doing greedy

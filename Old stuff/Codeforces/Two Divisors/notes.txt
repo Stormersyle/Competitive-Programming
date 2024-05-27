@@ -1,0 +1,5 @@
+Key idea: Look at LCM and smallest factors
+
+General ideas:
+-Smallest factors of a number are easy to work with.
+    Since: smallest factor = p (smallest prime factor), and 2nd smallest = prime q or p^2

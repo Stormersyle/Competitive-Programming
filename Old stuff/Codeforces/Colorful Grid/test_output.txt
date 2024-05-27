@@ -1,0 +1,24 @@
+YES
+R B R B 
+R R R R 
+R R R R 
+R R R R 
+B B R R R 
+R R R R B 
+R R R R R 
+NO
+NO
+YES
+R B 
+R R 
+R R 
+B B R 
+R R B 
+YES
+R R R 
+R R R 
+R B R 
+R R R 
+R B R R 
+B B R R 
+R R R B 

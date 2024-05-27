@@ -1,0 +1,28 @@
+Key idea:
+
+-Fix subarrays we're summing! Reduces to doing sums in max array/min array.
+    Equivalent to summing 2 disjoint subarrays in max array (if no overlap),
+    or summing interval in max array + sub-interval in min array (if overlap).
+
+-For both sums: iterate through a middle point!
+
+
+Particularly, for maximizing sum of 2 disjoint subarrays in max array:
+    iterate through middle point: find max subarray sum before/after each point using
+    standard prefix and suffix sum technique
+
+And for summing interval in max array + sub-interval in min array:
+    iterate through middle point: find max sums starting/ending at each point in both arrays.
+    And this works because max sum ending at i in max array must contain the max sum ending at i in min array!
+        (Otherwise, can extend: since max array >= min array)
+
+    Note: this is not exactly the same thing as maximizing sum of 2 disjoint subarrays;
+    can't do same approach, since min subarray ending at i is not necessarily in max subarray ending at i
+
+
+General ideas:
+-Fix something! (Lets us discover useful properties)
+    In this case, fixing the subarrays we're summing lets us see it from the max/min array perspective.
+-Iterate through a middle point
+
+-In general, max/min subarray sum problems

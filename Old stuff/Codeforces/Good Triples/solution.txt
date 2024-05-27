@@ -1,0 +1,4 @@
+Key idea:
+When numbers are added, digit sums add IF AND ONLY IF there are no carries.
+
+so for this problem: just multiply the number of partitions for each digit.

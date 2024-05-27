@@ -1,0 +1,14 @@
+Key idea:
+-To check if position is reached in "middle part" of sequence:
+    equivalent to checking if a different position is in a range of suffix sums!
+
+Rest of solution:
+-And to check if reached in first/last part of sequence:
+    equivalent to checking if position is in range of prefix sums
+To check if a position is in range of prefix/suffix sums: can directly do in O(log n), by keeping a list of
+the prefix/suffix sums that equal each pos.
+
+
+General ideas:
+-INTERPRET USING PREFIX/SUFFIX SUMS!
+-Easy to check if something's in a range of prefix/suffix sums

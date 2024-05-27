@@ -1,0 +1,13 @@
+Key idea: 2 x n grid with 1 mark per column looks like alternating "bars" on the top/bottom
+
+And for each bar: one frog escapes, rest die
+
+
+Note: if instead the problem didn't specify that each lilypad must have a frog (and only that
+each frog must be on a lilypad), then:
+
+-Key idea: on each bar, optimal to have the leftmost frog hop left if possible, or hop right if not;
+           so optimal to greedily save frogs from left to right (for each bar)
+Remember greedy!
+
+AND: don't misread the problem (like I did two times)

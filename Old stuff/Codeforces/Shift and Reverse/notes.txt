@@ -1,0 +1,39 @@
+Solution:
+Say, R is shift right, I is reverse
+start (1 2 ... n): RI=(n-1...1 n)=IL
+(can also say:     LI=(1 n...2)=IR )
+
+moves is a sequence of Is and Rs;
+now note: RIR=I, RII=R; so assume if there's an I, it's at the beginning and/or end!
+so: sequence must be (I)+(Rs)+(I)
+
+try k Rs: if no decreases, already sorted
+look for first decrease, then read from there, check if sorted upward.
+note: if first decrease from i->i+1: then k=n-i, so n-i moves.
+
+try k Rs + I: if no increases, just I works
+look for first increase, then read from there, check if sorted downward.
+note: if first increase from i->i+1: then k=n-i; so n-i+1 moves.
+
+Also need to take into account I at the beginning, or double Is...
+I + k Rs + I = k Ls. But if left shift, then +2 essentially.
+I + k Rs = k Ls + I. Can left shift with no change.
+
+(clever implementation for both these: double the sequence, and read the length n sequence starting
+from first decrease. this way it automatically wraps back around)
+
+
+Key ideas:
+-RI=IL, so can reduce to sequences (I)(Rs)(I)
+-I(Rs)I=Ls, and I(Rs)=(Ls)I; further reduce to sequences (Ls/Rs) and (Ls/Rs)(I)
+
+General ideas:
+-SIMPLIFY MOVE SEQUENCES.
+    basically, when we are dealing with a problem involving a sequence of moves/operations:
+    sometimes we can make observations about the possible/optimal sequences of operations, and
+    simplify/reduce it to a few easy ones.
+        Examples: combining two adjacent moves; in this case, simplifying RIR=I
+
+-EXTEND LIST.
+    useful technique for when we have to "wrap back around" a list/array/string: we can instead
+    extend it via a copy, and keep going normally.

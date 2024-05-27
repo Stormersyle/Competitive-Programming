@@ -1,0 +1,7 @@
+Key idea:
+-Adding dist^2 = adding sum of coords, (mod 2); so final sum parity depends only on last point
+                                                (since first point fixed, everything else added twice)
+
+-So each player: want a certain parity to be last, and reduce the opposite parity each move.
+
+(Overall: parity that appears more wins)

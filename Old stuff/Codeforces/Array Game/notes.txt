@@ -1,0 +1,4 @@
+Key idea:
+-If >=3 operations allowed: can make 0
+-If <=2 operations:
+Each min diff must be a consecutive diff, so just look at min conseucitve diff in possible sorted lists.

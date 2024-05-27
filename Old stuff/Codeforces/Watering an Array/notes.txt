@@ -1,0 +1,44 @@
+Each day:
++1 to given prefix, or count fixed points + reset the array (to all 0s)
+
+Observation:
+If we start at all 0s: then after prefix additions, array will nonincreasing order.
+    And in a nonincreasing array: there is at most one fixed point!
+                                    (if j is a fixed point: no fixed point before or after it)
+    But after first prefix addition, there's exactly one fixed point.
+
+    So no point in continuing to add beyond first prefix addition!
+
+    So: once we reset: just alternate (+1, count).
+
+Say we first count on day x: then, total score = (score_x)+floor((d-x)/2)
+
+
+Now question is: when to first count? OHH right!
+Observation: if we count/reset on day 1, we get to score n on day 2n+1. So score_{2n+1}=n
+Thus: we should first count on day <=2n+1 (since first count gives score <=n)
+    Now: just simulate first_count on days 1-->2n+1, takes O(n^2).
+
+Is there a fast way to simulate? I don't think so, just brute force.
+
+
+OHHHHH BRUH! My solution was entirely right, but I misread input size for k...
+CHECK INPUT SIZES!
+
+
+Key ideas:
+-If start at all 0s, then we can never have >1 fixed point!
+    (Since: keep +1 to a prefix, array will stay nonincreasing)
+    Thus: optimal to cycle (+, count/reset) after first count/reset.
+
+-We should first count/reset on day <=2n+1; so just simulate each possibility for first count/reset.
+    (since by cycling (count, +), we can reach score n on day 2n+1)
+
+
+General ideas:
+-Pruning the search space. (ONE TYPE of brute force with optimization)
+
+    Common idea:
+    Prune/cut down possibilities, then simulate/brute force on the remaining.
+    In this case: we can cut out waiting till day >=2n+2, so just simulate waiting till each of
+    first 2n+1 days to count/reset.

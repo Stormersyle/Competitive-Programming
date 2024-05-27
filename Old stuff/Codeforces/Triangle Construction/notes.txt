@@ -1,0 +1,14 @@
+Key idea:
+-Think of it as taking max # of (1, 1, 1)/(1, 2)/(2, 1)s from stacks A_1, ..., A_n
+-Intuitively: we can just do (1, 2)/(2, 1), and we can "take fully" iff (max stack)<=2*(sum of rest)
+
+(this can probably be proved by some kind of induction; but seems like greedy will work.
+But in this case, intuition suffices)
+
+
+Remember, for the classical problem of how many k-tuples (1, ..., 1) we can take from stacks a_1, ..., a_n:
+Key idea:
+-Binary search
+-To check if t tuples works: each a_i contributes <=min(a_i, t) to amount taken
+
+We can take t tuples iff sum min(a_i, t)>=tk; and if this holds, greedy is best strategy.

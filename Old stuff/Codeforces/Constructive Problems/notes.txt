@@ -1,0 +1,10 @@
+Key idea:
+
+-We need a mark in each row and column (thus need max(m, n) marks)
+    If we don't have a mark in a row/col: that row/col will never get a mark
+
+- construction for max(m, n) marks: zigzag along the diagonal across the entire board!
+    Proof this works: the diagonals "grow out" one by one
+
+
+Thus: min marks to start with is max(m, n).

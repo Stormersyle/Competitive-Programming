@@ -1,0 +1,20 @@
+Key idea:
+-Start with the aisles, and add seats one distance at a time
+-To count # of arrangements:
+    Equivalent to finding number of ways we can make n numbers (each 0/1/2) sum to x.
+    To do this, just iterate through all combinations of (# of 0s, # of 1s, # of 2s), and
+    add trinomial coefficients. O(n).
+
+    (My original attempt: DP, which took O(n^2))
+
+General ideas/takeaways:
+-When minimizing something: common strategy is:
+go from min number to max number, and take as many as possible of each one.
+
+-Be careful when checking time complexity!
+
+
+
+(Note: entirely special case of n<2k, t=-1, r=n:
+first put down k+1 0s, one at each end and 1 between each pair of aisles.
+now, n-k-1 0s, and k-1 possible places to put them; (k-1\choose n-k-1) ways.)

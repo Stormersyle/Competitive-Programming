@@ -1,0 +1,5 @@
+Key idea:
+-Divisibility tests are just b^k=0 (mod n), b^k=1 (mod n), and b^k=-1 (mod n)
+                            (last k digits, sum of groups, alternating sum, respectively)
+
+-Just break up into cases on whether (b, n) coprime, simulate through

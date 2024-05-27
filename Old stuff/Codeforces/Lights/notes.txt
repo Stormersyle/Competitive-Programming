@@ -1,0 +1,9 @@
+Key idea:
+-Make functional graph, interpret as assigning 0/1 to edges
+-For each branched ring:
+    Assignments to the branches (trees) are fixed
+    Two inversing possibilities for ring assignments; just check one (and if work, take the better one)
+
+General ideas:
+-Functional graph consists of branched rings! (BRANCHED rings, NOT spiked rings)
+-Try graph interpretations!

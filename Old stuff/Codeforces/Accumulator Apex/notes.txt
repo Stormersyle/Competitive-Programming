@@ -1,0 +1,13 @@
+Solution: Greedily take first positive prefix with highest trough (each step)
+
+Key idea:
+-Optimal to take a first positive prefix each step
+    Proof: Local improvement in the move sequence, by putting rest of the fpp just before the last element,
+    we can make improvement (at the end will stay the same, points before then will increase).
+    (So thus: we can split our moves into taking first positive prefixes)
+-Do it greedily, take one with highest trough.
+    Proof: exchange argument (if low+high works, so does high+low; but not vice versa)
+
+General ideas:
+-Simplify move sequences, often via local improvement (in this case: optimal to only take FPPs each step)
+-Greedy + exchange argument

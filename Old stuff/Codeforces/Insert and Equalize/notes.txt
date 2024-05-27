@@ -1,0 +1,5 @@
+Key idea:
+-x=gcd of differences
+-Additional number should be the first number that's a multiple of x lower than M
+
+The bug I was stuck on: I was returning an int from the function when it should be long long! OHHHH BRUH

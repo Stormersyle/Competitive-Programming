@@ -1,0 +1,27 @@
+Each move, we can +k to some #, and split; can we make given array all equal?
+
+Solution:
+First, size observation: note that if we have one <k and one >k, we'll fail. But actually:
+if we work backwards, this is easy to see as well!
+
+So work backwards: say we reverse the process, start with all t and our allowed move is (combine - k).
+I.e. each step, we can combine two numbers and -k.
+And now, try to make sequence a_1, ..., a_n.
+
+Then, turns out: {#s we can make} = {k+d, k+2d, k+3d, ...}, or {k-d, k-2d, k-3d, ...}.
+                So, automatically implies size barrier!
+                And: need all a_i=k+sd for some s; turns out each k+sd takes s-1 moves to make,
+                by strong induction.
+                And so, we should have d=gcd({a_i-k})
+
+
+Key idea:
+    -Work backwards / reverse the process!
+        doing (+k, split) has a lot of freedom and is difficult to get a handle over;
+        but if we reverse the process:
+            start from all t and do (combine - k), this is much more restricted/easy to work with!
+
+
+General idea:
+    -Work backwards!
+        Often, for a process/sequence of moves: reverse the process!

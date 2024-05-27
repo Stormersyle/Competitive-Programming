@@ -1,0 +1,15 @@
+5 size
+1 2 3 4 6 
+
+s[3] 4
+if can't find element, s.find_by_order(x) returns s.end()
+s.find(x) still works
+order(3) 2
+order(8) 5
+
+1
+if that was 1, indexed_set.begin() works
+
+6 value corresponding to upper_bound(4)
+4 value corresponding to lower_bound(4)
+s.clear() works too

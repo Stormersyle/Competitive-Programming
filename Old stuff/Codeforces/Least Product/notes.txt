@@ -1,0 +1,5 @@
+Key idea: sign of product doesn't flip! (since sign of each element doesn't flip)
+
+So if product positive: make it 0, by setting anything to 0
+If product negative: keep as is, since can't increase magnitudes!
+If product=0: has to stay 0, keep as is

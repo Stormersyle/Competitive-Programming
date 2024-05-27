@@ -1,0 +1,11 @@
+Key idea:
+-Find strongest possible necessary condition:
+for each a_i that needs to increase, the interval to one of the nearest x's has a<=x and b>=x
+
+-This is sufficient: doing the moves in increasing order lets them not interfere!
+
+
+Implementation:
+-Sparse tables for range min/max queries
+-Just iterate through and store last index of each number, to find previous index of a fixed
+number at each i

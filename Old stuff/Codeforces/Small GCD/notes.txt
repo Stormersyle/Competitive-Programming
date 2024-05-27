@@ -1,0 +1,24 @@
+Key idea:
+-Directly count # of triples with each value
+-(# of triples with value = x) =
+    (# of triples with value divisble by x)-(# of triples with value a bigger multiple of x)
+
+    Compute this: ends up being O(n*sqrt(A)+A log A)
+
+So, this is the same idea as the argument in the classic gcd sum problem!
+
+My mistake: trying to rewrite the summation and compute the sum of gcd(a_i, everything else) for all i;
+this doesn't work, instead: correct approach was to directly count # of triples with each value
+
+In general, another takeaway: always try simple/direct approaches, and don't be afraid to take a step back;
+in this case, direct approach of counting # of triples with each value was the way to go.
+
+
+
+Classic gcd sum problem:
+Find the sum of all pairwise gcds in an array
+
+Key idea:
+-Count the # of gcds with each value
+-(# of gcds = x) = (# of gcds divisble by x) - (# of gcds = a bigger multiple of x)
+    Precompute # of multiples of each x: total of O(n*sqrt(A)+A log A) to compute! (If we calculate downward)

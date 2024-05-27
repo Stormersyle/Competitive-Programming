@@ -1,0 +1,10 @@
+Key idea:
+-Max subsequence = sequence of all suffix maxes!
+
+-Each right shift of max subsequence:
+    last term & first pos get cut off; rest of terms shift right, and set of positions stays the same.
+
+
+General idea:
+-In a sequence, lexographically maximum subsequence is the sequence of all suffix maxes!
+    Algorithm to find maximum subsequence: each step, go to next instance of current suffix max.

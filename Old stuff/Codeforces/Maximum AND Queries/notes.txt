@@ -1,0 +1,7 @@
+Key idea:
+Greedily make each bit in AND = 1, from left to right
+
+
+General ideas:
+Common idea in bitwise operator problems where we want to minimize/maximize something:
+greedily make each bit = 0/1, from left to right.

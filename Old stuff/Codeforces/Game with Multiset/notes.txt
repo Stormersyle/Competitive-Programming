@@ -1,0 +1,2 @@
+OHH wait, bug: in original program, if x1==0: it just skips everything and returns false.
+    so that's the edge case where it fails! need to return (is x1==0 at the end)... OHHH ok.

@@ -1,0 +1,13 @@
+Key idea:
+-View each pair (a_i, b_i) as a segment on the number line, and total diff as sum of lengths!
+
+Solution:
+-View each (a_i, b_i) as a segment on the number line, and total diff as sum of lengths
+-Swapping only helps for non-intersecting segments
+    Increase from swapping = 2*(distance apart)
+    Thus, problem reduces to finding the max distance between two (non-intersecting) segments
+
+
+General ideas:
+-When dealing with absolute value: always think about distances!
+    very often, absolute value stuff can be better interpreted geometrically/in terms of distances

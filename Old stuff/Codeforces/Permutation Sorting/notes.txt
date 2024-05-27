@@ -1,0 +1,10 @@
+Basically: we have a list of bad values, and we make a right cyclic shift each step on it.
+We want to find # of steps for everything to fully disappear.
+
+Key idea:
+-For each bad value:
+    another value finishing lets us skip one iff its path is completely within our path!
+    Thus: total steps = (path length) - (# of contained paths in our path)
+
+-Reduces to interval containment problem!
+    Implementation: extend the wrap-around paths, and copy the normal the paths.

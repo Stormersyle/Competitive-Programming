@@ -1,0 +1,39 @@
+Key idea:
+-Count number of pairs with each gcd
+    Classic "count gcds" problem
+
+-To check if each gcd has factor in array:
+    Mark all multiples of each distinct element in the array!
+
+
+
+Count gcds problem:
+Given array (length n, a_i<=A), count number of pairs with each gcd.
+
+Key idea:
+    count_gcd(x) = (# of gcds divisible by x) - (sum of count_gcd for bigger multiples of x)
+    DP downwards, this is O(A log A)! (via harmonic sum)
+
+Note (# of gcds divisible by x) is just (# of pairs where both are multiples of x), so
+suffices to find # of multiples of each x.
+To count multiples:
+    Keep frequency table; and for each x, go through all multiples and add frequencies!
+    O(A log A) again
+
+    We could also do "go through elements" rather than "go through values" approach:
+    For each element, go through all factors and add them, this is O(n sqrt(A)). Generally worse.
+
+
+So, recap on Count GCDs problem:
+We can count number of pairs with each gcd, in O(n + A log A)!
+
+Key idea: Downward DP on count_gcd(x); take # of pairs both divisble by x, and subtract count_gcd of all bigger multiples
+
+
+General ideas:
+-Count GCD problem! Takes O(n + A log A)
+
+-In general: iterating through all multiples of everything up to A is O(A log A)!
+    So common idea is to iterate through multiples and use this harmonic sums idea.
+
+-Try both: go through elements, and go through values! (in array-related counting problems)

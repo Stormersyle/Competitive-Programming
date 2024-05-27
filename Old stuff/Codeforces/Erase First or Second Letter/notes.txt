@@ -1,0 +1,28 @@
+Simplify move sequence!
+Let F=remove first, S=remove second
+Note: (k Ss + F) = (k+1) Fs !
+e.g. S...SF = F...FF
+
+So, assume: no Fs after an S, otherwise can reduce.
+Meaning sequence is: F...FS...S
+
+a Fs, b Ss: means we remove first a, keep next one, remove next b.
+In other words: we replace a prefix with a single char!
+
+Thus: move sequence equivalent to replacing a prefix with a single char.
+
+# of strings that can be generated from this: sum of (# of distinct chars in prefix) over all prefixes
+            And note: not changing anything = replacing 1st prefix with itself (so already counted)
+            Lengths for each prefix replacement are different; so no two overlap.
+
+
+Key idea:
+-Simplify move sequence: reduce to F...FS...S
+-Thus: move sequence equivalent to replacing a prefix with a single char in it!
+
+(so: we can just sum # of distinct chars over all prefixes)
+
+
+General ideas:
+-Simplify move sequence!
+    Very useful in this case.

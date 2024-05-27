@@ -1,0 +1,31 @@
+Key idea:
+-Local improvement: suboptimal for segments to cross (overlap but with no containment)
+    Because: Each cross can be improved by making it into a containment!
+
+-For segments to have no crossing: start/endpoints must be paired like matching brackets!
+    since: each start point can't be paired till next unfinished start point is paired.
+
+-Finally: oppositely sort weights and segment lengths, match them (bc of Rearrangement Inequality)
+
+
+General ideas:
+-Local improvement
+-Bracket matching
+-Rearrangement inequality
+
+Some more details:
+-Bracket matching:
+    We can simulate bracket matching using a stack, because at each point, last bracket to open is the
+    first one to close! Thus: we store open brackets with a LIFO data structure (aka stack).
+
+-Rearrangement inequality:
+    For length n lists of real numbers: the sum x_1*y_1+...+x_n*y_n (i.e. "dot product") is
+    maximized when both are similarly sorted, minimized when both are oppositely sorted.
+
+    (Similarly sorted = both increasing/both decreasing, oppositely sorted = one increasing/other decreasing)
+
+    Note: this holds for ALL LISTS OF REAL NUMBERS, not just positive numbers!
+
+    Proof: have one list sorted in increasing order:
+    then in the other list, swapping an inversion (nonstrictly) increases sum;
+                            making an inversion (nonstrictly) decreases it

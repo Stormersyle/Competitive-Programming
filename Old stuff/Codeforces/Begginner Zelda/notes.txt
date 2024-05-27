@@ -1,0 +1,21 @@
+Solution:
+First, designate a root node to never be a leaf. Now we want to get rid of all the leaves.
+Each path compression subtracts AT MOST two leaves.
+    Since: only leaves that can be destroyed are at the end of the path.
+
+And, if we take a path through the root with both endings as leaves, we're GUARANTEED to -2 leaves.
+Think of compressing it into the root: subtract 2 leaves, make no leaves.
+Only exception: if the tree is a path, then -1 leaf.
+
+Thus: min # of moves to get rid reduce the tree to a node is ceil((# of leaves)/2)
+
+
+Key idea:
+    -Look at the number of leaves!
+
+
+General idea:
+-For problems involving finding minimum number of moves for a process, common idea is:
+    find some statistic/parameter and look at its change
+
+    In this case: for tree problems, LOOK AT NUMBER OF LEAVES!

@@ -1,0 +1,9 @@
+Key idea: Straightforward subtree DP
+
+If we know min # of moves to fix each of left subtree and right subtree: easy to find how many moves to fix
+this overall subtree
+
+General ideas:
+Remember, subtree DP!
+Subtree DP useful when calculating something for a subtree is easy once we've found it for all the
+child subtrees. Do this bottom up, takes O(n)

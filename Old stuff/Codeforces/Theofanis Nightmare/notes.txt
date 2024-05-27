@@ -1,0 +1,9 @@
+Key idea:
+In terms of the sum, starting a new subarray is equivalent to duplicating the current suffix!
+
+(so we just add all positive suffixes, after the first one)
+
+General ideas:
+-Look at sums from two dimensions!
+Particularly: the sum a_1+2a_2+3a_3+....+ka_k can also be viewed in "row form", as the sum of k rows!
+(This is what we did here: look at it as rows)

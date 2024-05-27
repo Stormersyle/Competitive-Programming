@@ -1,0 +1,5 @@
+Key idea:
+-Only care about terms (mod 2), so treat it as a binary sequence
+-DP/recursion: standard prefix DP for each pair of last 2 digits
+    Particularly: find (# of valid sequences in each prefix with each pair of last 2 digits (00, 01, 10, 11))
+    This makes transitions easy, since last 2 digits tells us previous digit!
